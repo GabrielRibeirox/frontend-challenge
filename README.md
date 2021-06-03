@@ -1,7 +1,7 @@
-##### Hello World, this is my participation in the frontend-challenge
+# Hello World, this is my participation in the frontend-challenge
 
 
-#The project was developed using react
+# The project was developed using react
 
 # Was separated the order screen into three parts, header, suppliers and address.
 
