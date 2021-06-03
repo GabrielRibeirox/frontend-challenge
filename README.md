@@ -10,7 +10,9 @@
 ### Initially for the API integration, the axios and the map method were used.
 ### Hooks like useState and useEffect were also used
 
-###For the styling, was used styled-components
+### For the styling, was used styled-components
+
+### a component called card was created to generate the array addresses automatically
 
 ### Getting Started Project
 
