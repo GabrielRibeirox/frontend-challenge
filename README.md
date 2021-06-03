@@ -18,5 +18,5 @@
 
 ## After installation, to run use
 
-# yarn start 
+# `yarn start` 
 
