@@ -1,21 +1,22 @@
-# Hello World, this is my participation in the frontend-challenge
+# Hello World!
+### this is my participation in the frontend-challenge
 
 
-# The project was developed using react
+### The project was developed using react
 
-# Was separated the order screen into three parts, header, suppliers and address.
+### Was separated the order screen into three parts, header, suppliers and address.
 
 
-#Initially for the API integration, the axios and the map method were used.
-#Hooks like useState and useEffect were also used
+### Initially for the API integration, the axios and the map method were used.
+### Hooks like useState and useEffect were also used
 
-#For the styling, was used styled-components
+###For the styling, was used styled-components
 
-# Getting Started Project
+### Getting Started Project
 
-### `npm install -y`
+# `npm install -y`
 
-# After installation, to run use
+## After installation, to run use
 
-### yarn start 
+# yarn start 
 
