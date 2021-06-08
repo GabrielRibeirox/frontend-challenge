@@ -7,13 +7,14 @@ import Card from '../components/Card';
 import { IconCircleDown } from '../styles/order';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useVisibilityToggle from '../components/useVisibilityToggle';
 
 
 export default function App() {
   const [repo, setRepo] = useState([]);
 
 
-
+  // API conection
   useEffect(() => {
     axios.get('https://me-frontend-challenge-api.herokuapp.com/orders/1')
       .then((response) => {
@@ -21,6 +22,25 @@ export default function App() {
 
       });
   }, []);
+
+
+  // Visibility Card Address button
+  const [AddressCardComponent, toggleCardVisibility] = useVisibilityToggle(
+    repo.length === 0 ? '' :
+      repo.addresses.map((repo, index) =>
+        <Card key={index}
+          label={repo.label}
+          name={repo.name}
+          code={repo.code}
+          address={repo.address}
+          contactName={repo.contact.name}
+          contactEmail={repo.contact.email}
+          contactPhone={repo.contact.phone}
+          contactFax={repo.contact.fax}
+        />
+      ), true);
+
+
 
 
   return (
@@ -56,25 +76,16 @@ export default function App() {
               />
               <CardContent>
                 <Title5>
-                  <IconCircleDown><FontAwesomeIcon icon={faChevronCircleDown}></FontAwesomeIcon></IconCircleDown>
-                 Addresses
-              </Title5>
+                  <button onClick={toggleCardVisibility}>
+                    <IconCircleDown><FontAwesomeIcon icon={faChevronCircleDown}></FontAwesomeIcon></IconCircleDown>
+                  </button>
+                  <span>
+                    Addresses
+                  </span>
+                </Title5>
               </CardContent>
               <Flex>
-
-                {repo.addresses.map((repo, index) => {
-                  return <Card key={index}
-                    label={repo.label}
-                    name={repo.name}
-                    code={repo.code}
-                    address={repo.address}
-                    contactName={repo.contact.name}
-                    contactEmail={repo.contact.email}
-                    contactPhone={repo.contact.phone}
-                    contactFax={repo.contact.fax}
-
-                  />
-                })}
+                {AddressCardComponent}
               </Flex>
             </Content>
           </Section>
