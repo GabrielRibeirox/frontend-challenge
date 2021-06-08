@@ -6,7 +6,7 @@ export const Content = styled.div`
     color: black;
     margin: 2rem 3rem 10rem 3rem;
     border-radius: 8px;
-    min-height: 613.19px;
+    
 
      @media (max-width: 500px) { 
        min-height: 800px;
