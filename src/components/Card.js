@@ -13,7 +13,7 @@ function Card(props) {
         <div className="col-md-12 card">
           <Title2>{props.label}</Title2>
 
-          <Title4> {props.name} - <i> {props.code} </i> </Title4>
+          <Title4> {props.name}  {props.code && <i> - {props.code} </i>} </Title4>
 
           <p>
             <Icon2><FontAwesomeIcon icon={faMapMarked}></FontAwesomeIcon></Icon2>
