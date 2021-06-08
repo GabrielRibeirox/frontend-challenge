@@ -6,6 +6,11 @@ export const Content = styled.div`
     color: black;
     margin: 2rem 3rem 10rem 3rem;
     border-radius: 8px;
+    min-height: 613.19px;
+
+     @media (max-width: 500px) { 
+       min-height: 800px;
+        }
 `
 export const CardContent = styled.div`
     margin: 0rem 1rem;
@@ -53,7 +58,18 @@ export const Title4 = styled.h1`
     color:#000000;
 `
 export const Title5 = styled(Title4)`
-    font-size: 19px;
+        span{
+        font-size: 19px;
+        margin-left:0.2rem;
+        }
+        button{
+            border: none;
+
+        }
+        button:hover{
+            transition:0.5s;
+            transform: scale(1.12);
+        }
 `
 export const Marker = styled.span`
     font-size: 14px;
@@ -92,9 +108,10 @@ export const Div = styled.div`
 `
 export const Icon = styled.span`
     color:#0A8CCC;
-    margin:0 0.3rem 0 0.2rem;
+    margin:0 0.3rem 3rem 0.6rem;
     font-size: 14px;
     font-weight: lighter;
+   
 
     @media (max-width: 376px) { 
         margin: 0rem 12rem 1rem 0rem;
@@ -114,6 +131,11 @@ export const Icon2 = styled(Icon)`
 `
 export const IconCircleDown = styled(Icon)`
     font-size: 20px;
+    opacity: 70%;
+    
+    :hover{
+        opacity: 100%;
+    }
 `
 
 
