@@ -24,7 +24,9 @@ function Header(props) {
               </div>
               <div>
                 <ContainerHeader>
-                  <Title1>{props.buyer}</Title1>
+                  <div className="Price">
+                    <Title1>{props.buyer}</Title1>
+                  </div>
                   <p>
                     <Icon><FontAwesomeIcon icon={faUsers}></FontAwesomeIcon></Icon>{props.companyName}
                   </p>

@@ -6,8 +6,8 @@ export const Content = styled.div`
     color: black;
     margin: 2rem 3rem 10rem 3rem;
     border-radius: 8px;
-    min-height: 613.19px;
-
+    
+    
      @media (max-width: 500px) { 
        min-height: 800px;
         }
@@ -36,8 +36,10 @@ export const Title1 = styled.h1`
     font-size: 24px;
     font-weight: bold;
     color:#1B1B1B;
-    margin:0 0.5rem;
+    margin:0 1rem 0 0;
     margin-bottom: 1rem;
+    
+   
 `
 export const Title2 = styled.h1`
     font-size: 14px;
@@ -64,6 +66,7 @@ export const Title5 = styled(Title4)`
         }
         button{
             border: none;
+            width: 3rem;
 
         }
         button:hover{
@@ -82,6 +85,18 @@ export const Flex = styled.div`
     @media (max-width: 576px) { 
         display:block;
     }
+    @media(max-width: 770px) { 
+       
+        flex-direction:column;
+
+        .Price{
+            @media (max-width: 769px) { 
+            text-align: center;
+            font-size: 15px;
+            transition: 0.3
+           
+            }
+    }
 `
 export const Container = styled.div`
     padding-top: 1rem;
@@ -94,17 +109,23 @@ export const Container = styled.div`
 `
 export const Div = styled.div`
     padding-top: 1.5rem;
+    padding-left: 0;
     margin: 0rem 1rem 1rem 1rem;
     box-shadow:5px;
+    
 
     p{
         font-size: 14px;
-        text-align: justify;
         text-indent: 0;
     }
     @media (max-width: 376px) { 
         line-height: 25px;
         }
+    @media (max-width: 769) {
+            flex-direction: column;
+            
+    } 
+        
 `
 export const Icon = styled.span`
     color:#0A8CCC;
@@ -128,6 +149,9 @@ export const Icon2 = styled(Icon)`
         margin: 0rem 10rem 1rem 0rem;
         transition:0.5s;
         }
+    @media (max-width: 756px) {
+        margin: 0rem 0.3rem 1rem 0rem;
+    }
 `
 export const IconCircleDown = styled(Icon)`
     font-size: 20px;
@@ -154,13 +178,22 @@ export const Ticket = styled.div`
         font-size:26px;
     }
 
-    @media (max-width: 576px) { 
+    @media (max-width: 769px) { 
         margin-bottom: 2rem;
     }
 `
 export const ContainerHeader = styled.div`
     margin-left: 2rem;
     min-width: 1%;
+
+    @media (max-width: 769px) {
+        .Price{
+            text-align: center;
+            font-size: 15px;
+            transition: 0.3
+            }
+     }
+
     @media (max-width: 576px) { 
         transition:0.5s;
         margin: 0 1rem;
@@ -168,11 +201,7 @@ export const ContainerHeader = styled.div`
             line-height: 25px;
         }
 
-        .Price{
-            text-align: center;
-            font-size: 15px;
-            transition: 0.3
-        }
+        
         
     }
 `

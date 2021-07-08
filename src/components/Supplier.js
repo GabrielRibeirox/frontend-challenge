@@ -23,7 +23,7 @@ function Supplier(props) {
             </Flex>
             <div className="row">
 
-              <div className="col-md-4" >
+              <div className="col-md-4 col-sm-12" >
                 <p>
                   {props.valueDocument}
                 </p>
