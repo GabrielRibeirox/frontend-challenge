@@ -64,7 +64,7 @@ export const Title5 = styled(Title4)`
         }
         button{
             border: none;
-
+            width: 3rem;
         }
         button:hover{
             transition:0.5s;
